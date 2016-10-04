@@ -1,0 +1,18 @@
+{
+  "name": "englishdept",
+  "version": "1.0.0",
+  "description": "English Department - Universitas Hasanuddin",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Endy Hardy",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "gulp": "^3.9.1",
+    "gulp-copy": "0.0.2",
+    "gulp-sass": "^2.3.2",
+    "jquery": "^3.1.0"
+  }
+}
