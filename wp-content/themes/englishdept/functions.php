@@ -33,7 +33,7 @@ function englishdept_sidebars()
 		'name' => 'Footer Sidebar',
 		'id' => 'englishdept-footer-sidebar',
 		'description' => 'Widgets shown in the footer section',
-		'before_widget' => '<div class="col-md-3">',
+		'before_widget' => '<div class="col-md-3 col-sm-4">',
 		'after_widget' => '</div>',
 		'before_title' => '<h4>',
 		'after_title' => '</h4>'

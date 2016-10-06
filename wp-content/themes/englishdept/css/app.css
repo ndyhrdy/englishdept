@@ -6165,6 +6165,10 @@ a.thumbnail:focus {
     min-width: 400px;
     color: #fff; }
 
+@media (max-width: 991px) {
+  .single-cover {
+    margin-right: -30px; } }
+
 .staff {
   position: relative;
   height: 120px;

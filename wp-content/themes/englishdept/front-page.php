@@ -39,7 +39,7 @@
 
 	<section>
 		<div class="row">
-			<div class="col-lg-8">
+			<div class="col-md-8">
 				<span class="h3 text-uppercase section-heading">Recent Updates</span>
 				<div class="row post-thumbnail-group">
 					<br />
@@ -47,7 +47,7 @@
 					while(have_posts()): 
 						the_post(); 
 						?>
-						<div class="col-md-4">
+						<div class="col-lg-4 col-sm-6">
 							<div class="post-thumbnail-group-item">
 								<?php if (has_post_thumbnail(get_the_ID())): ?>
 									<a href="<?php the_permalink() ?>" class="image">
@@ -61,9 +61,9 @@
 					<?php endwhile; ?>
 				</div>
 				<br />
-				<p><a href="#">All updates <b class="fa fa-fw fa-arrow-right"></b></a></p>
+				<p style="margin-bottom:45px;"><a href="#">All updates <b class="fa fa-fw fa-arrow-right"></b></a></p>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-md-4">
 				<span class="h4 text-uppercase section-heading">Announcements</span>
 
 				<ul class="list-unstyled announcement-list">

@@ -330,6 +330,11 @@ a.thumbnail:focus {
 
 	}
 }
+@media (max-width: $screen-sm-max) {
+	.single-cover {
+		margin-right: -30px;
+	}
+}
 
 .staff {
 	position: relative;

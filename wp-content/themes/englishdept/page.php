@@ -2,7 +2,7 @@
 
 	<section>
 		<div class="row">
-			<div class="col-md-9">
+			<div class="col-md-8">
 				<?php if (have_posts()): the_post(); ?>
 
 					<h1><?php the_title() ?></h1>
@@ -13,7 +13,7 @@
 				<?php endif; ?>
 				
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 col-md-offset-1">
 				<div class="sidebar">
 					<?php dynamic_sidebar('englishdept-aside-sidebar') ?>
 				</div>
