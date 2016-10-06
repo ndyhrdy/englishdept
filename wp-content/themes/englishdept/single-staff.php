@@ -28,7 +28,7 @@ $staff->fetch(get_the_ID());
 					<?php endif; ?>
 
 					<div>
-						<?php echo $staff->field('bio') ?>
+						<?php echo apply_filters('the_content', $staff->field('bio')) ?>
 					</div>
 
 					<div class="form-horizontal">

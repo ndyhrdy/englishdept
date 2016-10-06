@@ -14,7 +14,9 @@
 		max-height: 100%;
 	}
 }
-.navbar-static-top .navbar-brand:hover {
+.navbar-static-top .navbar-brand:active,
+.navbar-static-top .navbar-brand:hover,
+.navbar-static-top .navbar-brand:focus {
 	background-color: $brand-primary;
 }
 .navbar-static-top .navbar-nav {
@@ -207,8 +209,21 @@ a.thumbnail:focus {
 .sidebar {
 	margin-top: 60px;
 
-	.page-header {
-		margin-top: 0;
+
+	.widget {
+		margin-bottom: 45px;
+		
+		.page-header {
+			margin-top: 0;
+			margin-bottom: 15px;
+		}
+		.menu {
+			list-style: none;
+			padding: 0;
+		}
+		.menu li {
+			padding: 3px 0;
+		}
 	}
 
 	.eo-widget-cal-wrap table {
@@ -231,13 +246,13 @@ a.thumbnail:focus {
 			td.eo-after-month {
 				background-color: transparent;
 			}
-			td.today {
-				background-color: $brand-primary;
-				color: #fff;
-			}
 			td.event {
 				background-color: $gray-light;
 				a { color: #fff; }
+			}
+			td.today {
+				background-color: $brand-primary;
+				color: #fff;
 			}
 		}
 		tfoot {

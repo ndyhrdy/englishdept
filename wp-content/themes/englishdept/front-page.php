@@ -59,9 +59,10 @@
 							</div>
 						</div>
 					<?php endwhile; ?>
+
 				</div>
 				<br />
-				<p style="margin-bottom:45px;"><a href="#">All updates <b class="fa fa-fw fa-arrow-right"></b></a></p>
+				<p style="margin-bottom:45px;"><a href="<?php echo get_category_link(3) ?>">All updates <b class="fa fa-fw fa-arrow-right"></b></a></p>
 			</div>
 			<div class="col-md-4">
 				<span class="h4 text-uppercase section-heading">Announcements</span>
@@ -83,8 +84,7 @@
 						endif;
 					?>
 				</ul>
-
-				<p><a href="#">All announcements <b class="fa fa-fw fa-arrow-right"></b></a></p>
+				<p><a href="<?php echo get_category_link(4) ?>">All announcements <b class="fa fa-fw fa-arrow-right"></b></a></p>
 			</div>
 		</div>
 	</section>
