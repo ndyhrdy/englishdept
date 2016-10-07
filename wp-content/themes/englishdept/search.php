@@ -3,14 +3,14 @@
 	<section>
 
 		<div class="row">
-			<div class="col-lg-8">
+			<div class="col-md-9">
 				<?php if (have_posts()): ?>		
 					<h1>Search results for "<?php echo $_GET['s'] ?>"</h1>
 
 					<div class="post-list">
 						<?php while(have_posts()): the_post(); ?>
 							<div class="post-list-item">
-								<h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
+								<h3><a href="<?php the_permalink() ?>?ref=<?php echo urlencode(get_bloginfo('url') . "?s=" . $_GET['s']) ?>"><?php the_title() ?></a></h3>
 								<div class="ellipsis-multiline">
 									<?php the_content(); ?>
 								</div>
@@ -30,7 +30,11 @@
 				<?php endif ?>
 				
 			</div>
-			<div class="col-lg-4"></div>
+			<div class="col-md-3">
+				<div class="sidebar">
+					<?php dynamic_sidebar('englishdept-aside-sidebar') ?>
+				</div>
+			</div>
 		</div>
 
 	</section>

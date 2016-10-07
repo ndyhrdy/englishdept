@@ -6,7 +6,7 @@
 	</div>
 	<section>
 		<div class="row">
-			<div class="col-lg-8">
+			<div class="col-md-8">
 				<?php the_content() ?>
 
 				<div class="row">
@@ -30,7 +30,7 @@
 					<?php endforeach; ?>
 				</div>
 			</div>
-			<div class="col-lg-3 col-lg-offset-1">
+			<div class="col-md-3 col-md-offset-1">
 				<div class="sidebar sidebar-single">
 					<?php dynamic_sidebar('englishdept-aside-sidebar') ?>
 				</div>

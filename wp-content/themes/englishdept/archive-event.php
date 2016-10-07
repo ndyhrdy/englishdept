@@ -3,7 +3,7 @@
 	<section>
 		
 		<div class="row">
-			<div class="col-lg-9">
+			<div class="col-md-9">
 				<?php if(have_posts()): ?>
 					<h1>
 						<?php if (isset($_GET['ondate'])): ?>
@@ -39,7 +39,7 @@
 
 				<?php endif ?>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-md-3">
 				<div class="sidebar sidebar-single">
 					<?php dynamic_sidebar('englishdept-aside-sidebar') ?>
 				</div>

@@ -2,7 +2,7 @@
 
 	<section>
 		<div class="row">
-			<div class="col-lg-3" style="margin-top:15px;">
+			<div class="col-md-3" style="margin-top:15px;">
 				<div data-spy="affix" data-offset-top="60" style="width:252px;">
 					<div class="h4">Browse Resources</div>
 					<ul class="list-unstyled">
@@ -16,7 +16,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="col-lg-6">
+			<div class="col-md-6">
 				<?php 
 				if (have_posts()): 
 					$doc = pods('document');
