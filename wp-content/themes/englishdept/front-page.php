@@ -15,6 +15,9 @@
 							<?php echo get_the_post_thumbnail($sticky_post, 'full') ?>
 							<div class="carousel-caption">
 								<h2><?php the_title() ?></h2>
+								<p class="text-muted">
+									<?php echo get_the_date() ?>
+								</p>
 								<div class="ellipsis-multiline"><?php echo apply_filters('the_excerpt', get_the_content()) ?></div>
 								<h4><a href="<?php the_permalink() ?>">Read more <b class="fa fa-arrow-right"></b></a></h4>
 							</div>
@@ -39,7 +42,7 @@
 
 	<section>
 		<div class="row">
-			<div class="col-md-8">
+			<div class="col-md-9">
 				<span class="h3 text-uppercase section-heading">Recent Updates</span>
 				<div class="row post-thumbnail-group">
 					<br />
@@ -52,6 +55,7 @@
 								<?php if (has_post_thumbnail(get_the_ID())): ?>
 									<a href="<?php the_permalink() ?>" class="image">
 										<?php echo get_the_post_thumbnail(get_the_ID(), 'medium') ?>
+										<div class="caption"><?php echo get_the_date() ?></div>
 									</a>
 								<?php endif; ?>
 								<h4 class="ellipsis"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
@@ -64,27 +68,11 @@
 				<br />
 				<p style="margin-bottom:45px;"><a href="<?php echo get_category_link(3) ?>">All updates <b class="fa fa-fw fa-arrow-right"></b></a></p>
 			</div>
-			<div class="col-md-4">
-				<span class="h4 text-uppercase section-heading">Announcements</span>
+			<div class="col-md-3">
+				<div class="sidebar sidebar-single">
+					<?php dynamic_sidebar('englishdept-aside-sidebar') ?>
+				</div>
 
-				<ul class="list-unstyled announcement-list">
-					<br />
-					<?php
-						$announcements = new WP_Query(['cat' => 4]);
-						if ($announcements->have_posts()):
-							while($announcements->have_posts()):
-								$announcement = $announcements->the_post();
-								?>
-									<li>
-										<h5><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h5>
-										<div class="ellipsis"><?php echo apply_filters('the_excerpt', get_the_content()) ?></div>
-									</li>
-								<?php
-							endwhile;
-						endif;
-					?>
-				</ul>
-				<p><a href="<?php echo get_category_link(4) ?>">All announcements <b class="fa fa-fw fa-arrow-right"></b></a></p>
 			</div>
 		</div>
 	</section>

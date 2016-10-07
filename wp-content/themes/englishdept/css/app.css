@@ -5915,7 +5915,7 @@ a img.aligncenter {
   margin-bottom: 0; }
 
 .navbar-static-top .navbar-brand {
-  background-color: #FF530D;
+  background-color: #ff4e05;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
   border-bottom: #eb4400 3px solid;
   height: 80px;
@@ -6039,6 +6039,7 @@ a.thumbnail:focus {
   top: 82px; }
 
 .post-thumbnail-group .post-thumbnail-group-item .image {
+  position: relative;
   display: block;
   overflow-y: hidden;
   height: 120px;
@@ -6046,6 +6047,13 @@ a.thumbnail:focus {
   .post-thumbnail-group .post-thumbnail-group-item .image img {
     height: auto;
     max-width: 100%; }
+  .post-thumbnail-group .post-thumbnail-group-item .image .caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 2px 4px;
+    background-color: #eb4400;
+    color: #fff; }
 
 .staff-details {
   position: relative;
@@ -6074,7 +6082,7 @@ a.thumbnail:focus {
 .sidebar {
   margin-top: 60px; }
   .sidebar .widget {
-    margin-bottom: 45px; }
+    margin-bottom: 30px; }
     .sidebar .widget .page-header {
       margin-top: 0;
       margin-bottom: 15px; }
@@ -6112,6 +6120,10 @@ a.thumbnail:focus {
         padding-top: 10px; }
       .sidebar .eo-widget-cal-wrap table tfoot td:last-of-type {
         text-align: right; }
+  .sidebar .eo-events-widget {
+    margin-bottom: 45px;
+    list-style: none;
+    padding: 0; }
 
 .sidebar.sidebar-single {
   margin-top: 0; }

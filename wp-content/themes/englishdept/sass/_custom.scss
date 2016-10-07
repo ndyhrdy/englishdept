@@ -3,7 +3,7 @@
 	margin-bottom: 0;
 }
 .navbar-static-top .navbar-brand {
-	background-color: #FF530D;
+	background-color: lighten($brand-primary, 5%);
 	box-shadow: 0 2px 4px rgba(0,0,0,0.4);
 	border-bottom: $brand-primary 3px solid;
 	height: 80px;
@@ -160,6 +160,7 @@ a.thumbnail:focus {
 	.post-thumbnail-group-item {
 
 		.image {
+			position: relative;
 			display: block;
 			overflow-y: hidden;
 			height: 120px;
@@ -168,6 +169,14 @@ a.thumbnail:focus {
 			img {
 				height: auto;
 				max-width: 100%;
+			}
+			.caption {
+				position: absolute;
+				top: 0;
+				left: 0;
+				padding: 2px 4px;
+				background-color: $brand-primary;
+				color: #fff;
 			}
 		}
 	}
@@ -211,7 +220,7 @@ a.thumbnail:focus {
 
 
 	.widget {
-		margin-bottom: 45px;
+		margin-bottom: 30px;
 		
 		.page-header {
 			margin-top: 0;
@@ -264,6 +273,11 @@ a.thumbnail:focus {
 				text-align: right;
 			} 
 		}
+	}
+	.eo-events-widget {
+		margin-bottom: 45px;
+		list-style: none;
+		padding: 0;
 	}
 }
 .sidebar.sidebar-single {
