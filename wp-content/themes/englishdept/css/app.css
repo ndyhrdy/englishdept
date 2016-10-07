@@ -5991,6 +5991,10 @@ section {
     max-width: 100%;
     height: auto; }
 
+@media (max-width: 767px) {
+  .container {
+    padding: 0; } }
+
 .container .jumbotron {
   border-radius: 0;
   margin-bottom: 0; }
@@ -6024,6 +6028,19 @@ section {
     position: absolute;
     bottom: 50px;
     right: 50px; }
+  @media (max-width: 767px) {
+    .carousel {
+      max-height: none;
+      overflow: visible; }
+      .carousel .carousel-inner .carousel-caption {
+        position: relative;
+        width: 100%;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto; }
+      .carousel .carousel-controls {
+        display: none; } }
 
 .pagination .current,
 .pagination .current:hover {
