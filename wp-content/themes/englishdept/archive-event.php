@@ -39,7 +39,7 @@
 
 				<?php endif ?>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 hidden-sm hidden-xs">
 				<div class="sidebar sidebar-single">
 					<?php dynamic_sidebar('englishdept-aside-sidebar') ?>
 				</div>

@@ -35,7 +35,7 @@
 							<span class="sr-only">Search for</span>
 							<div class="input-group">
 								<input type="text" name="s"<?php if (isset($_GET['s'])): ?> value="<?php echo $_GET['s'] ?>"<?php endif ?> class="form-control" placeholder="Search and hit enter" />
-								<span class="input-group-btn">
+								<span class="input-group-btn hidden-sm hidden-xs">
 									<button type="submit" class="btn btn-default"><b class="fa fa-search fa-fw"></b></button>
 								</span>
 							</div>

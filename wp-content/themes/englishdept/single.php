@@ -8,7 +8,12 @@
 					<?php if (has_post_thumbnail()): ?>
 						<div class="single-cover" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>')">
 							<div class="caption">
-								<h1><?php the_title() ?></h1>
+								<h1>
+									<?php if (isset($_GET['ref'])): ?>
+										<a href="<?php urldecode($_GET['ref']) ?>"><b class="fa fa-angle-left"></b></a>
+									<?php endif ?>
+									<?php the_title() ?>
+								</h1>
 								<div>
 									<?php if (count(get_the_category()) > 0): ?>
 										<span class="small text-uppercase"><?php echo esc_html(get_the_category()[0]->name) ?> /</span>

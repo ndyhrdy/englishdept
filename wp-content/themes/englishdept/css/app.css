@@ -5921,9 +5921,12 @@ a img.aligncenter {
   height: 80px;
   padding: 10px 15px;
   position: absolute;
-  left: 30px; }
+  left: 0; }
   .navbar-static-top .navbar-brand img {
     max-height: 100%; }
+  @media (min-width: 992px) {
+    .navbar-static-top .navbar-brand {
+      left: 30px; } }
 
 .navbar-static-top .navbar-brand:active,
 .navbar-static-top .navbar-brand:hover,
@@ -5949,21 +5952,28 @@ a img.aligncenter {
     padding: 10px 15px;
     color: #9d9d9d; }
 
-.navbar-static-top .navbar-nav > li:hover {
-  background-color: #212c33; }
-  .navbar-static-top .navbar-nav > li:hover > a {
-    color: #fff; }
-  .navbar-static-top .navbar-nav > li:hover > ul.sub-menu {
-    display: block; }
-    .navbar-static-top .navbar-nav > li:hover > ul.sub-menu li > a:hover {
-      text-decoration: none;
+@media (min-width: 992px) {
+  .navbar-static-top .navbar-nav > li:hover {
+    background-color: #212c33; }
+    .navbar-static-top .navbar-nav > li:hover > a {
       color: #fff; }
+    .navbar-static-top .navbar-nav > li:hover > ul.sub-menu {
+      display: block; }
+      .navbar-static-top .navbar-nav > li:hover > ul.sub-menu li > a:hover {
+        text-decoration: none;
+        color: #fff; } }
 
 .navbar-static-top .navbar-form {
-  border-left: #3f5561 thin solid;
   margin: 0;
-  padding: 8px 0;
-  padding-left: 10px; }
+  padding: 8px 0; }
+  .navbar-static-top .navbar-form input {
+    padding-left: 0; }
+  @media (min-width: 992px) {
+    .navbar-static-top .navbar-form {
+      border-left: #3f5561 thin solid;
+      padding-left: 10px; }
+      .navbar-static-top .navbar-form input {
+        padding-left: 12px; } }
   .navbar-static-top .navbar-form .form-control,
   .navbar-static-top .navbar-form .btn {
     outline: none;
@@ -6186,6 +6196,10 @@ a.thumbnail:focus {
     width: 60%;
     min-width: 400px;
     color: #fff; }
+    .single-cover .caption a, .single-cover .caption a:focus {
+      color: #ffa885; }
+    .single-cover .caption a:hover {
+      color: #fff; }
 
 @media (max-width: 991px) {
   .single-cover {

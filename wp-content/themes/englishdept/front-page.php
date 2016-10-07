@@ -68,7 +68,7 @@
 				<br />
 				<p style="margin-bottom:45px;"><a href="<?php echo get_category_link(3) ?>">All updates <b class="fa fa-fw fa-arrow-right"></b></a></p>
 			</div>
-			<div class="col-md-3">
+			<div class="col-md-3 hidden-sm hidden-xs">
 				<div class="sidebar sidebar-single">
 					<?php dynamic_sidebar('englishdept-aside-sidebar') ?>
 				</div>

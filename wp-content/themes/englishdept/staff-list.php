@@ -4,7 +4,7 @@
 
 	<div class="row">
 		<?php while($staff->fetch()): ?>
-			<div class="col-md-4">
+			<div class="col-md-4 col-sm-6">
 				<div class="staff">
 					<div class="image">
 						<?php echo get_the_post_thumbnail($staff->field('id'), 'medium') ?>

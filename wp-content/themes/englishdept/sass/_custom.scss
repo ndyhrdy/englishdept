@@ -9,9 +9,12 @@
 	height: 80px;
 	padding: 10px 15px;
 	position: absolute;
-	left: 30px;
+	left: 0;
 	img {
 		max-height: 100%;
+	}
+	@media (min-width: $screen-md-min) {
+		left: 30px;
 	}
 }
 .navbar-static-top .navbar-brand:active,
@@ -43,26 +46,38 @@
 			color: $navbar-inverse-link-color;
 		}
 	}
-	> li:hover {
-		background-color: darken($navbar-inverse-bg, 5%);
-		> a {
-			color: $navbar-inverse-link-hover-color;
-		}
-		> ul.sub-menu {
-			display: block;
-			li > a:hover {
-				text-decoration: none;
+
+	@media (min-width: $screen-md-min) {
+		> li:hover {
+			background-color: darken($navbar-inverse-bg, 5%);
+			> a {
 				color: $navbar-inverse-link-hover-color;
+			}
+			> ul.sub-menu {
+				display: block;
+				li > a:hover {
+					text-decoration: none;
+					color: $navbar-inverse-link-hover-color;
+				}
 			}
 		}
 	}
 }
 .navbar-static-top .navbar-form {
-	border-left: lighten($navbar-inverse-bg, 10%) thin solid;
 	margin: 0;
 	padding: 8px 0;
-	padding-left: 10px;
+	input {
+		padding-left: 0;
+	}
 
+	@media (min-width: $screen-md-min) {	
+		border-left: lighten($navbar-inverse-bg, 10%) thin solid;
+		padding-left: 10px;
+
+		input {
+			padding-left: 12px;
+		}
+	}
 	.form-control,
 	.btn {
 		outline: none;
@@ -357,6 +372,12 @@ a.thumbnail:focus {
 		min-width: 400px;
 		color: #fff;
 
+		a, a:focus {
+			color: lighten($brand-primary, 30%);
+		}
+		a:hover {
+			color: #fff;
+		}
 	}
 }
 @media (max-width: $screen-sm-max) {
