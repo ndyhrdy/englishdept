@@ -25,16 +25,16 @@
 							</div>
 							<div class="col-sm-9">
 								<h4 class="page-header">Recently Uploaded - <?php echo $type->name ?></h4>
-								<ul class="list-unstyled">
+								<div class="post-list">
 									<?php while ($posts->fetch()): ?>
-										<li>
-											<h5><a href="<?php echo get_the_permalink($posts->field('id')) ?>?ref=<?php echo urlencode(get_the_permalink()) ?>"><?php echo $posts->display('title') ?></a></h5>
+										<div class="post-list-item">
+											<h5 class="ellipsis"><a href="<?php echo get_the_permalink($posts->field('id')) ?>?ref=<?php echo urlencode(get_the_permalink()) ?>"><?php echo $posts->display('title') ?></a></h5>
 											<div class="ellipsis-multiline">
 												<?php echo $posts->display('content') ?>
 											</div>
-										</li>
+										</div>
 									<?php endwhile ?>
-								</ul>
+								</div>
 								<p>
 									<a href="<?php echo get_term_link($type->slug, 'document-type') ?>">Browse all <b class="fa fa-arrow-right"></b></a>
 								</p>

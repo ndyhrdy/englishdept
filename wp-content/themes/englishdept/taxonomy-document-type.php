@@ -34,11 +34,13 @@
 								<div class="ellipsis-multiline">
 									<?php the_content(); ?>
 								</div>
-								<div style="margin-top:5px;">
-									<?php foreach(get_the_tags() as $tag): ?>
-										<a href="<?php echo get_tag_link($tag) ?>" class="label label-primary"><?php echo $tag->name ?></a>
-									<?php endforeach; ?>
-								</div>
+								<?php if (is_array(get_the_tags())): ?>
+									<div style="margin-top:5px;">
+										<?php foreach(get_the_tags() as $tag): ?>
+											<a href="<?php echo get_tag_link($tag) ?>" class="label label-primary"><?php echo $tag->name ?></a>
+										<?php endforeach; ?>
+									</div>
+								<?php endif ?>
 							</div>
 						<?php endwhile; ?>
 					</div>
