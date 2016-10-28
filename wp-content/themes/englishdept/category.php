@@ -1,4 +1,13 @@
 <?php 
+
+/*
+ * Single Category Taxonomy Page Template
+ * Displays a list of posts under the queried category taxonomy
+ *
+ * Author: Endy Hardy
+ * Tweet to me at twitter.com/ndyhrdy
+ */
+
 get_header(); 
 $cat = get_queried_object();
 ?>
@@ -17,7 +26,7 @@ $cat = get_queried_object();
 							<div class="post-list-item">
 								<h3><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h3>
 								<div class="text-muted">
-									<?php the_date() ?>
+									<?php echo get_the_date() ?>
 								</div>
 								<div class="ellipsis-multiline">
 									<?php the_content(); ?>

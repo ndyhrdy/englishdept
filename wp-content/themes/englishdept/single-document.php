@@ -6,7 +6,8 @@
 				<?php if (have_posts()): 
 					$doc = pods('document'); 
 					$doc->fetch(get_the_ID());
-					$doctype = $doc->field('document-type')[0];
+					$doctype = $doc->field('document-type');
+					$doctype = $doctype[0];
 					?>
 					<h1>
 						<a href="<?php echo isset($_GET['ref']) ? urldecode($_GET['ref']) : get_term_link($doctype['slug'], 'document-type') ?>"><b class="fa fa-angle-left"></b></a>
@@ -37,7 +38,7 @@
 						<?php endif; ?>
 
 						<?php 
-						$authors = $doc->field('staff_authors') ?: [];
+						$authors = $doc->field('staff_authors') ?: array();
 						$authors = array_merge($authors, explode(PHP_EOL, $doc->field('authors')));
 						if ($authors[0]): ?>
 							<div class="form-group">

@@ -46,7 +46,7 @@
 							<ul class="list-inline social-media">
 								<?php foreach($media as $m): 
 									$m = explode('*', $m);
-									$supported_media = ['facebook', 'twitter', 'google-plus', 'instagram', 'linkedin', 'web'];
+									$supported_media = array('facebook', 'twitter', 'google-plus', 'instagram', 'linkedin', 'web');
 									if (in_array($m[0], $supported_media)):
 										?>
 										<li><a href="<?php echo $m[1] ?>" target="_blank" rel="nofollow"><b class="fa fa-<?php echo strtolower($m[0]) == 'web' ? 'globe' : strtolower($m[0])?>"></b></a></li>

@@ -175,11 +175,13 @@ section {
 	color: #fff;
 }
 
-a.thumbnail {
+a.thumbnail.thumbnail-department {
 	transition: all 0.1s ease-out;
+	background-color: transparent;
+	border: none;
 }
-a.thumbnail:hover,
-a.thumbnail:focus {
+a.thumbnail.thumbnail-department:hover,
+a.thumbnail.thumbnail-department:focus {
 	background-color: $brand-primary;
 	text-decoration: none;
 	.caption {
@@ -276,6 +278,9 @@ a.thumbnail:focus {
 
 	.eo-widget-cal-wrap table {
 		width: 100%;
+		caption {
+			text-transform: uppercase;
+		}
 		thead th {
 			background-color: $brand-primary;
 			border: #fff 2px solid;

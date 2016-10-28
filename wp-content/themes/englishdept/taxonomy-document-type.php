@@ -6,7 +6,7 @@
 				<div data-spy="affix" data-offset-top="60" style="width:252px;">
 					<div class="h4">Browse Resources</div>
 					<ul class="list-unstyled">
-						<?php foreach(get_terms('document-type', ['hide_empty' => false]) as $term): ?>
+						<?php foreach(get_terms('document-type', array('hide_empty' => false)) as $term): ?>
 							<?php if (get_queried_object()->slug == $term->slug): ?>
 								<li><strong><?php echo $term->name ?></strong></li>
 							<?php else: ?>
@@ -42,7 +42,7 @@
 							</div>
 						<?php endwhile; ?>
 					</div>
-					<?php $page_links = paginate_links(['type' => 'array']) ?>
+					<?php $page_links = paginate_links(array('type' => 'array')) ?>
 					<?php if (count($page_links) > 0): ?>
 						<ul class="pagination">
 							<?php foreach($page_links as $page_link): ?>

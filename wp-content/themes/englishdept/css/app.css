@@ -6048,15 +6048,17 @@ section {
   border-color: #b83500;
   color: #fff; }
 
-a.thumbnail {
-  transition: all 0.1s ease-out; }
+a.thumbnail.thumbnail-department {
+  transition: all 0.1s ease-out;
+  background-color: transparent;
+  border: none; }
 
-a.thumbnail:hover,
-a.thumbnail:focus {
+a.thumbnail.thumbnail-department:hover,
+a.thumbnail.thumbnail-department:focus {
   background-color: #eb4400;
   text-decoration: none; }
-  a.thumbnail:hover .caption,
-  a.thumbnail:focus .caption {
+  a.thumbnail.thumbnail-department:hover .caption,
+  a.thumbnail.thumbnail-department:focus .caption {
     color: #fff; }
 
 .affix {
@@ -6120,6 +6122,8 @@ a.thumbnail:focus {
       padding: 3px 0; }
   .sidebar .eo-widget-cal-wrap table {
     width: 100%; }
+    .sidebar .eo-widget-cal-wrap table caption {
+      text-transform: uppercase; }
     .sidebar .eo-widget-cal-wrap table thead th {
       background-color: #eb4400;
       border: #fff 2px solid;

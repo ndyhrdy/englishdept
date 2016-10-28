@@ -15,8 +15,11 @@
 									<?php the_title() ?>
 								</h1>
 								<div>
-									<?php if (count(get_the_category()) > 0): ?>
-										<span class="small text-uppercase"><?php echo esc_html(get_the_category()[0]->name) ?> /</span>
+									<?php 
+									$categories = get_the_category();
+										if (count($categories) > 0): 
+										?>
+										<span class="small text-uppercase"><?php echo esc_html($categories[0]->name) ?> /</span>
 									<?php endif ?>
 									<?php the_date() ?> &mdash;
 									by <?php the_author() ?>
@@ -26,8 +29,8 @@
 					<?php else: ?>
 						<h1><?php the_title() ?></h1>
 						<p class="text-muted">
-							<?php if (count(get_the_category()) > 0): ?>
-								<span class="label label-primary"><?php echo esc_html(get_the_category()[0]->name) ?></span>
+							<?php if (count($categories) > 0): ?>
+								<span class="label label-primary"><?php echo esc_html($categories[0]->name) ?></span>
 							<?php endif; ?>
 							<?php the_date() ?> &mdash; 
 							by <?php the_author() ?>
@@ -39,8 +42,8 @@
 
 					<?php 
 					if (count(get_the_category()) > 0):
-						$no_comments_categories = ['announcement'];
-						if (!in_array(get_the_category()[0]->slug, $no_comments_categories)):
+						$no_comments_categories = array('announcement');
+						if (!in_array($categories[0]->slug, $no_comments_categories)):
 							comments_template();
 						endif;
 					endif;

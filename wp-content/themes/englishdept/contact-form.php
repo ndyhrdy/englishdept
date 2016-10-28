@@ -1,3 +1,15 @@
+<?php
+
+/*
+ * Contact Form Template
+ * Displays a contact form for visitors to submit
+ *
+ * Author: Endy Hardy
+ * Tweet to me at twitter.com/ndyhrdy
+ */
+
+?>
+
 <br />
 <form action="<?php bloginfo('url') ?>" method="post" accept-charset="utf-8">
 	<div class="form-group row">

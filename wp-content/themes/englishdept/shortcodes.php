@@ -18,9 +18,9 @@ function englishdept_shortcode_contact_form()
 function englishdept_shortcode_staff_list()
 {
 	$staff = pods('staff');
-	$staff->find([
+	$staff->find(array(
 		'orderby' => 't.post_title ASC'
-		]);
+		));
 	ob_start();
 	require_once 'staff-list.php';
 	return ob_get_clean();

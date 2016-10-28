@@ -1,3 +1,16 @@
+<?php
+
+/*
+ * Footer Section Template
+ * Includes the footer section and widgets, and miscellaneous
+ * JS imports and scripts
+ *
+ * Author: Endy Hardy
+ * Tweet to me at twitter.com/ndyhrdy
+ */
+
+?>
+
 		<div class="footer">
 			<div class="row">
 				<div class="col-md-3 col-sm-4">

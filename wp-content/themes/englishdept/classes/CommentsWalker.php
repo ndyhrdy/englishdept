@@ -6,7 +6,7 @@
 class CommentsWalker extends Walker_Comment
 {
 	
-	function start_el(&$output, $item, $depth = 0, $args = [], $id = 0)
+	function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0)
 	{
 		$output = sprintf('<div class="media-left">%s<div class="media-body"><h5 class="media-heading">%s<br /><small>%s</small></h5>%s</div></div>',
 			"",

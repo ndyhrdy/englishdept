@@ -1,4 +1,15 @@
-<?php get_header() ?>
+<?php
+
+/*
+ * Event Archives Template
+ * Archive (listing) page for datetime-based events
+ *
+ * Author: Endy Hardy
+ * Tweet to me at twitter.com/ndyhrdy
+ */
+
+get_header() 
+?>
 
 	<section>
 		

@@ -25,10 +25,10 @@
 				</div>
 		
 				<div class="collapse navbar-collapse" id="navbar-collapsible">
-					<?php wp_nav_menu([
+					<?php wp_nav_menu(array(
 						'theme_location' => 'englishdept-header-menu',
 						'menu_class' => 'nav navbar-nav'
-						]) 
+						)) 
 					?>
 					<form role="search" method="get" class="navbar-form navbar-right" action="<?php bloginfo('url') ?>">
 						<div class="form-group">

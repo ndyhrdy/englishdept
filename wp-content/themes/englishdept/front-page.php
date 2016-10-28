@@ -1,11 +1,23 @@
-<?php get_header() ?>
+<?php 
+
+/*
+ * Home Page Template
+ * Used as the site's front page to display recent posts
+ * chronologically
+ *
+ * Author: Endy Hardy
+ * Tweet to me at twitter.com/ndyhrdy
+ */
+
+get_header() 
+?>
 
 	<div class="carousel slide" id="carousel-cover" data-ride="carousel" data-interval="10000">
 		<div class="carousel-inner">
 			<?php
 				$stickies = get_option('sticky_posts');
 				$stickies = array_slice($stickies, 0, 5);
-				$stickies_query = new WP_Query(['post__in' => $stickies, 'ignore_sticky_posts' => 1]);
+				$stickies_query = new WP_Query(array('post__in' => $stickies, 'ignore_sticky_posts' => 1));
 				$stickies_index = 0;
 				while($stickies_query->have_posts()):
 					$sticky_post = $stickies_query->the_post();
