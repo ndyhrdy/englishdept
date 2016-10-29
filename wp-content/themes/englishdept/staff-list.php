@@ -7,7 +7,11 @@
 			<div class="col-md-4 col-sm-6">
 				<div class="staff">
 					<div class="image">
-						<?php echo get_the_post_thumbnail($staff->field('id'), 'medium') ?>
+						<?php
+						if (has_post_thumbnail($staff->field('id'))) 
+							echo get_the_post_thumbnail($staff->field('id'), 'small');
+						else echo '<img src="' . get_template_directory_uri() . '/images/placeholder-avatar.png">';
+						?>
 					</div>
 					<div class="caption">
 						<?php 

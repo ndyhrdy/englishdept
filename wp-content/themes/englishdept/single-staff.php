@@ -15,7 +15,13 @@ $staff->fetch(get_the_ID());
 				$staff_name .= $staff->display('post-text');
 				?>
 				<div class="staff-details">
-					<div class="staff-image"><?php echo get_the_post_thumbnail($staff->field('id'), 'medium') ?></div>
+					<div class="staff-image">
+						<?php
+						if (has_post_thumbnail($staff->field('id'))) 
+							echo get_the_post_thumbnail($staff->field('id'), 'full');
+						else echo '<img src="' . get_template_directory_uri() . '/images/placeholder-avatar.png">';
+						?>
+					</div>
 					<h1>
 						<a href="<?php echo isset($_GET['ref']) ? urldecode($_GET['ref']) : get_permalink(get_page_by_path('the-department/lecturers')) ?>"><b class="fa fa-angle-left"></b></a>
 						&nbsp;<?php echo $staff_name ?>

@@ -19,7 +19,8 @@ function englishdept_shortcode_staff_list()
 {
 	$staff = pods('staff');
 	$staff->find(array(
-		'orderby' => 't.post_title ASC'
+		'orderby' => 't.post_title ASC',
+		'limit' => 99
 		));
 	ob_start();
 	require_once 'staff-list.php';
