@@ -88,7 +88,7 @@ $staff->fetch(get_the_ID());
 								<div class="col-sm-9">
 									<?php foreach($media as $media): ?>
 										<?php $media = explode('*', $media); ?>
-										<a href="<?php echo $media[1] ?>" class="btn btn-default"><b class="fa fa-fw fa-<?php echo $media[0] == 'web' ? 'globe' : $media[0] ?>"></b> <?php echo $media[0] == 'web' ? 'Website' : ucfirst($media[0]) ?></a>
+										<a href="<?php echo $media[1] ?>" target="_blank" rel="nofollow" class="btn btn-default"><b class="fa fa-fw fa-<?php echo $media[0] == 'web' ? 'globe' : $media[0] ?>"></b> <?php echo $media[0] == 'web' ? 'Website' : ucfirst($media[0]) ?></a>
 									<?php endforeach ?>
 								</div>
 							</div>
