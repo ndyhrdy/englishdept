@@ -30,7 +30,7 @@ get_header()
 								<p class="text-muted">
 									<?php echo get_the_date() ?>
 								</p>
-								<div class="ellipsis-multiline"><?php echo apply_filters('the_excerpt', get_the_content()) ?></div>
+								<div class="ellipsis-multiline"><?php echo apply_filters('the_excerpt', get_the_excerpt()) ?></div>
 								<h4><a href="<?php the_permalink() ?>">Read more <b class="fa fa-arrow-right"></b></a></h4>
 							</div>
 						</div>
@@ -71,7 +71,7 @@ get_header()
 									</a>
 								<?php endif; ?>
 								<h4 class="ellipsis"><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
-								<div class="ellipsis-multiline"><?php the_content() ?></div>
+								<div class="ellipsis-multiline"><?php the_excerpt() ?></div>
 							</div>
 						</div>
 					<?php endwhile; ?>
