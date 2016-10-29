@@ -56,7 +56,11 @@
 					<h3>No <?php echo strtolower(get_queried_object()->name) ?> resources found.</h3>
 				<?php endif; ?>
 			</div>
-			<div class="col-lg-3"></div>
+			<div class="col-md-3 hidden-sm hidden-xs" style="margin-top: 25px;">
+				<div class="sidebar sidebar-single">
+					<?php dynamic_sidebar('englishdept-aside-sidebar') ?>
+				</div>
+			</div>
 		</div>
 	</section>
 

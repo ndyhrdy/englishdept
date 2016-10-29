@@ -3,12 +3,15 @@
 
 	<div class="jumbotron jumbotron-primary text-center"<?php if (has_post_thumbnail()): ?> style="background-image: url('<?php the_post_thumbnail_url('full') ?>');"<?php endif; ?>>
 		<h1><?php the_title() ?></h1>
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<?php the_content() ?>
+			</div>
+		</div>
 	</div>
 	<section>
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				<?php the_content() ?>
-
 				<?php 
 				$doctypes = get_terms('document-type', array('hide_empty' => false));
 				foreach($doctypes as $type):
